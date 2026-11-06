@@ -382,7 +382,7 @@ const menuItems = [
     category: "wraps",
     type: "nonveg",
     price: 425,
-    image: "39.jpg",
+    image: "399.jpg",
     description: "Tortilla, grilled chicken, sundried tomato, roasted garlic hummus, onions, jalapeno, mix leafy and in-house lemon olive oil dressing."
   },
   {
