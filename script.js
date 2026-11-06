@@ -391,7 +391,7 @@ const menuItems = [
     category: "wraps",
     type: "nonveg",
     price: 425,
-    image: "40.jpg",
+    image: "400.jpg",
     description: "Tortilla, peri peri chicken, roasted garlic hummus, onions, tomatoes, jalapeno, mix leafy and in-house Dijon mustard thyme dressing."
   },
   {
@@ -529,7 +529,7 @@ const menuItems = [
     name: "Smoky BBQ Chicken Salad",
     category: "salads",
     type: "nonveg",
-    image: "55.jpg",
+    image: "555.jpg",
     sizes: { Small: 425, Big: 525 },
     description: "Mix leafy, soba noodles, grilled bell pepper, cucumber, BBQ chicken, jalapeno, pickled onion, peanuts, mix seeds and in-house Italian balsamic dressing."
   },
