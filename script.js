@@ -848,14 +848,23 @@ function setupDietFilters() {
 // ================================================
 
 function addToCart(itemId, size = "") {
+  alert("Product ID: " + itemId);
+
   const item = menuItems.find(product => product.id === itemId);
-  if (!item) return;
+
+  if (!item) {
+    alert("ERROR: Product not found in menuItems!");
+    return;
+  }
 
   const selectedSize = size || (
     item.sizes ? Object.keys(item.sizes)[0] : ""
   );
 
   const price = getPrice(item, selectedSize);
+
+  alert("Product found! Price: ₹" + price);
+
   const cartId = itemId + (selectedSize ? "-" + selectedSize : "");
 
   const existing = cart.find(product => product.cartId === cartId);
@@ -873,10 +882,10 @@ function addToCart(itemId, size = "") {
     });
   }
 
-  updateCart();
-  showToast(item.name + " added to cart");
-}
+  alert("Cart items: " + cart.length);
 
+  updateCart();
+}
 // ================================================
 // 10. MENU BUTTON EVENTS
 // ================================================
