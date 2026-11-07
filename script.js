@@ -848,6 +848,7 @@ function setupDietFilters() {
 // ================================================
 
 
+
 function addToCart(itemId, size = "") {
   const item = menuItems.find(product => product.id === itemId);
 
@@ -891,25 +892,17 @@ function addToCart(itemId, size = "") {
 // ================================================
 // 10. MENU BUTTON EVENTS
 // ================================================
-
 function setupMenuEvents() {
   const grid = document.getElementById("menuGrid");
 
-  if (!grid) {
-    alert("ERROR: menuGrid not found!");
-    return;
-  }
-
-  alert("Menu event listener connected!");
+  if (!grid) return;
 
   grid.addEventListener("click", event => {
     const button = event.target.closest("[data-add]");
-
     if (!button) return;
 
-    alert("ADD BUTTON CLICK DETECTED!");
-
     const itemId = button.dataset.add;
+
     const sizeSelect = grid.querySelector(
       `[data-size-select="${itemId}"]`
     );
@@ -917,6 +910,7 @@ function setupMenuEvents() {
     addToCart(itemId, sizeSelect ? sizeSelect.value : "");
   });
 }
+
 // ================================================
 // 11. DISPLAY ADD-ONS
 // ================================================
