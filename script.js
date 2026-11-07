@@ -883,11 +883,20 @@ function addToCart(itemId, size = "") {
 
 function setupMenuEvents() {
   const grid = document.getElementById("menuGrid");
-  if (!grid) return;
+
+  if (!grid) {
+    alert("ERROR: menuGrid not found!");
+    return;
+  }
+
+  alert("Menu event listener connected!");
 
   grid.addEventListener("click", event => {
     const button = event.target.closest("[data-add]");
+
     if (!button) return;
+
+    alert("ADD BUTTON CLICK DETECTED!");
 
     const itemId = button.dataset.add;
     const sizeSelect = grid.querySelector(
@@ -897,7 +906,6 @@ function setupMenuEvents() {
     addToCart(itemId, sizeSelect ? sizeSelect.value : "");
   });
 }
-
 // ================================================
 // 11. DISPLAY ADD-ONS
 // ================================================
